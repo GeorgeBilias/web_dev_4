@@ -513,31 +513,34 @@ html,body{
   
   /* About Us Section */
   .about_us {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 20px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     margin: 20px auto;
     max-width: 800px;
     text-align: center;
-  }
-  
-  .about_us h1,
-  .about_us h2,
-  .about_us h3 {
+}
+  .about_us h1 {
+    font-size: 1.5em;
     margin-top: 10px;
-  }
-  
-  .about_us img {
+}
+
+.about_us h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.about_us img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-top: 10px;
-    margin-left: 40%;
-  }
+}
+
+.about_us h3 {
+    font-size: 1rem;
+    margin: 10px;
+}
   
   /* Media Queries for Responsive Design */
   
@@ -559,7 +562,6 @@ html,body{
     .title {
       padding: 0 5%; /* Adjust padding as needed */
       box-sizing: border-box; /* Include padding and border in the element's total width and height */
-      
     }
   
     .title h1 {
@@ -569,6 +571,26 @@ html,body{
     .main-bar {
       padding: 10px; /* Adjust padding as needed */
       box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .grid3 {
+      grid-template-columns: repeat(1, minmax(200px, 2fr));
+      margin-right: 15%;
+    }
+
+    .item #pic {
+      margin-top: 2%;
+      max-width: 80%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .item table{
+      font-size: 0.8em;
+      max-width: 100%;
+      table-layout: fixed;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
   
     .footer-links {
