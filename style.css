@@ -653,11 +653,26 @@ a:active {
   
   /* tablets */
   
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (min-width:901px) and (max-width: 1200px) {
     .title {
       padding: 0 5%;
     }
+    body {
+      grid-template-columns: 200px 1fr; /* Two columns: 1st for main-bar, 2nd for main content */
+      grid-template-areas:
+        "header header"
+        ". main"
+        "footer footer";
+    }
+    .main{
+      grid-area: main;
+    }
   
+    header,
+    footer {
+      grid-column: span 2; /* Span both columns */
+    }
+    
     .footer-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -670,5 +685,37 @@ a:active {
     
     }
   }
+  @media screen and (min-width: 1201px) {
+    .title {
+      padding: 0 5%;
+    }
+    body {
+      grid-template-columns: 200px 1fr 200px; /* Two columns: 1st for main-bar, 2nd for main content */
+      grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+    }
+    .main{
+      grid-area: main;
+    }
   
+    header,
+    footer {
+      grid-column: span 3; /* Span both columns */
+    }
+    
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .footer-links {
+      text-align: center;
+      display: block; /* stack the links vertically */
+      margin: 10px 0; /* add some vertical spacing between the links */
+      text-align: center;
+    
+    }
+    
+  }
   
